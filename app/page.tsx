@@ -8,8 +8,8 @@ export default function Page() {
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [status, setStatus] = useState<
-    "connecting" | "online" | "offline" | "buffering"
-  >("connecting");
+    "conectado" | "online" | "offline" | "buffering"
+  >("conectado");
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -67,7 +67,7 @@ export default function Page() {
     }
 
     try {
-      setStatus("connecting");
+      setStatus("conectado");
 
       await audio.play();
 
@@ -80,7 +80,7 @@ export default function Page() {
   };
 
   const statusInfo = {
-    connecting: {
+    conectado: {
       text: "Conectando à rádio...",
       icon: <Wifi size={18} />,
       className: "text-yellow-400",
@@ -175,7 +175,7 @@ export default function Page() {
               {/* BOTÃO */}
               <button
                 onClick={togglePlay}
-                disabled={status === "connecting" && !isPlaying}
+                disabled={status === "conectado" && !isPlaying}
                 className="
                   mt-8
                   w-24 h-24
