@@ -5,8 +5,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Rádio SSP",
-  description: "Rádio SSP Direção Roberto",
+  title: "Rádio RPS",
+  description: "Rádio RPS João de Deus",
 };
 
 export default function RootLayout({
